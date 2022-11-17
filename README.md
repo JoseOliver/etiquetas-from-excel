@@ -12,7 +12,7 @@ Instrucciones:
 
 Posibles problemas:
 
-Q: La primera vez funcionó, pero al ejecutar la macro de nuevo en excel, ya no actualiza las etiquetas. ¿Que hago?  
+1. Q: La primera vez funcionó, pero al ejecutar la macro de nuevo en excel, ya no actualiza las etiquetas. ¿Que hago?  
 A: Desactiva la caché temporalmente en tu explorador desde las herramientas de desarrollo: preferencias> red> deshabilitar caché
 
 Futuro de la app: Mejoras sugeridas
