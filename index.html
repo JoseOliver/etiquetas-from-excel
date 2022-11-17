@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      .etiqueta{
+        width: 48mm; border: 2px solid black; border-radius: 5px; text-align: center;
+      }
+      .qr{
+      margin: -6px 0 -46px 32px;
+      }
+      .label{
+        margin: 5px; font-family:fantasy;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div id="etiquetas"></div>
+
+    <script>
+      var etiquetas
+      var etiquetas_length
+
+      var getJSON = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+          var status = xhr.status;
+          if (status === 200) {
+            callback(null, xhr.response);
+          } else {
+            callback(status, xhr.response);
+          }
+        };
+        xhr.send();
+      };
+
+      getJSON("etiquetas.json",
+        function(err, data) {
+          if (err !== null) {
+            console.log(err)
+          } else {
+            etiquetas= data
+            etiquetas_length= Object.keys(etiquetas).length/4
+            var images = []
+            var canvases = []
+
+            for (var i = 0;i<etiquetas_length;i++){
+              var etiqueta= document.createElement("div")
+              etiqueta.className= "etiqueta"
+
+              var nombre= document.createElement("p")
+              nombre.className= "label"
+
+              var modelo= document.createElement("p")
+              modelo.className= "label"
+
+              var qr= document.createElement("canvas")
+              qr.className= "qr"
+              canvases.push(qr)
+
+              var image= document.createElement("img")
+              image.src = "QR/" + etiquetas[i + '-0'];
+              images.push(image)
+
+              var id= document.createElement("p")
+              id.className= "label"
+
+              etiqueta.appendChild(nombre)
+              etiqueta.appendChild(modelo)
+              etiqueta.appendChild(qr)
+              etiqueta.appendChild(id)
+
+              id.innerHTML= `${etiquetas[i + '-1']}`
+              nombre.innerHTML= "Nombre: " + `${etiquetas[i + '-2']}`
+              modelo.innerHTML= "Modelo: " + `${etiquetas[i + '-3']}`
+              document.getElementById("etiquetas").appendChild(etiqueta)
+            }
+
+            window.onload = function(){
+              for(var i=0; i< etiquetas_length; i++)
+              canvases[i].getContext("2d").drawImage(images[i], 0, 0);
+            }
+          }
+      })
+    </script>
+  </body>
+</html>
