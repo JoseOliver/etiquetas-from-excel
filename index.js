@@ -2,6 +2,11 @@ const qrcode = require('qrcode')
 const {exec} = require("child_process");
 const fs = require('fs')
 
+var dir = './QR';
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+}
+
 var etiquetas
 var longitud
 
