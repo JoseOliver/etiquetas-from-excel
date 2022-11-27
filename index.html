@@ -8,7 +8,7 @@
         width: 48mm; border: 2px solid black; border-radius: 5px; text-align: center;
       }
       .qr{
-      margin: -6px 0 -46px 32px;
+      
       }
       .label{
         margin: 5px; font-family:fantasy;
@@ -45,8 +45,6 @@
           } else {
             etiquetas= data
             etiquetas_length= Object.keys(etiquetas).length/4
-            var images = []
-            var canvases = []
 
             for (var i = 0;i<etiquetas_length;i++){
               var etiqueta= document.createElement("div")
@@ -58,13 +56,9 @@
               var modelo= document.createElement("p")
               modelo.className= "label"
 
-              var qr= document.createElement("canvas")
+              var qr= document.createElement("img")
               qr.className= "qr"
-              canvases.push(qr)
-
-              var image= document.createElement("img")
-              image.src = "QR/" + etiquetas[i + '-0'];
-              images.push(image)
+              qr.src = "QR/" + etiquetas[i + '-0'];
 
               var id= document.createElement("p")
               id.className= "label"
@@ -78,11 +72,6 @@
               nombre.innerHTML= "Nombre: " + `${etiquetas[i + '-2']}`
               modelo.innerHTML= "Modelo: " + `${etiquetas[i + '-3']}`
               document.getElementById("etiquetas").appendChild(etiqueta)
-            }
-
-            window.onload = function(){
-              for(var i=0; i< etiquetas_length; i++)
-              canvases[i].getContext("2d").drawImage(images[i], 0, 0);
             }
           }
       })

@@ -12,9 +12,14 @@ Instrucciones:
 
 Posibles problemas:
 
-1. Q: La primera vez funcionó, pero al ejecutar la macro de nuevo en excel, ya no actualiza las etiquetas. ¿Que hago?  
+1. Q: La primera vez funcionó, pero al ejecutar la macro de nuevo en excel, ya no actualiza las etiquetas. ¿Qué hago?  
 A: Desactiva la caché temporalmente en tu explorador desde las herramientas de desarrollo: preferencias> red> deshabilitar caché
 
+2. Q: No puedo ejecutar scritps en powershell por problemas de permisos. ¿Qué hago?  
+A: Permite ejectuar scripts para tu usuario:  
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 Futuro de la app: Mejoras sugeridas
 
 1. Poder elegir parametros y estilo de la etiqueta final mostrada de manera intuitiva  
