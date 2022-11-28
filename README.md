@@ -8,7 +8,7 @@ Instrucciones:
 3. Selecciona los ID's que vas a exportar como etiquetas  
 4. Pulsa "ctrl + i" para ejecutar la macro  
 5. ejecuta "npm install" para instalar las dependencias del programa  
-6. ejecuta "npm start" para visualizar las etiquetas. Una vez ejecutandose, abre el explorador con la ruta localhost:8080
+6. ejecuta "npm start" para visualizar las etiquetas. O ejecuta etiquetas.cmd (Windows). Una vez ejecutandose, abre el explorador con la ruta localhost:8080
 
 Posibles problemas:
 

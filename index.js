@@ -19,3 +19,4 @@ for (var i = 0;i<longitud;i++){
 
 exec("node_modules\\.bin\\http-server --cors")
 console.log("iniciado server en localhost:8080")
+console.log("recuerda cerrar esta ventana una vez termines de usarme")
