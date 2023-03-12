@@ -13,8 +13,8 @@
 2. Rellena nuevas etiquetas en la lista excel  
 3. Selecciona los ID's que vas a exportar como etiquetas  
 4. Pulsa "ctrl + i" para ejecutar la macro  
-5. Ejecuta "npm install" para instalar las dependencias del programa  
-6. Ejecuta "npm start" para visualizar las etiquetas. O ejecuta etiquetas.cmd (Windows). Una vez ejecutandose, abre el explorador con la ruta localhost:8080
+5. Ejecuta "npm install" para instalar las dependencias del programa, o ejecuta install.cmd (Windows).  
+6. Ejecuta "npm start" para visualizar las etiquetas, o ejecuta etiquetas.cmd (Windows). Una vez ejecutandose, abre el explorador con la ruta localhost:8080
 7. Si realizas una actualización desde la macro, te relanzará una nueva ventana con los cambios aplicados
 
 ## Posibles problemas:
