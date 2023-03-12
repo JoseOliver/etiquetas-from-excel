@@ -4,13 +4,14 @@
   "description": "visualizador web de etiquetas",
   "main": "",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon --watch etiquetas.json index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jose",
   "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1",
+    "nodemon": "^2.0.21",
     "qrcode": "^1.5.1"
   }
 }
