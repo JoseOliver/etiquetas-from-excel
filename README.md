@@ -4,8 +4,8 @@
 + Si necesitas adaptar la visualización de las etiquetas, solo tienes que editar index.html a tu gusto
 
 ## Screenshots
-![excel screenshot](./img/screen%20excel.JPG)
-![app screenshot](./img/screen%20explorer.JPG)
+![excel screenshot](./img/screen%20excel.jpg)
+![app screenshot](./img/screen%20explorer.jpg)
 
 ## Instrucciones:
 
